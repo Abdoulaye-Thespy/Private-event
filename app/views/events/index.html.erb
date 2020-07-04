@@ -1,0 +1,18 @@
+<% @events.each do |x| %>
+<div><%= x.description %></div>
+<div><%= x.user_id %></div>
+
+<% end %>
+<% if logged_in? %>
+<div class="buttons">
+  <button class="button is-warning">
+  	<%= link_to 'Create new even',  new_event_path %>
+  </button>
+</div>
+<% else %>
+<div class="buttons">
+  <button class="button is-warning">
+  	<%= link_to 'Login',  new_session_path %>
+  </button>
+</div>
+<% end %>
