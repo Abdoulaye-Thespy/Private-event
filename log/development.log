@@ -17016,3 +17016,293 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 252ms (Views: 240.9ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:10:47 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GO7Ybd2s9c51Akfqe8P8fRGo31hIHTEn1DOre+LgJHZWzJzPLBTP968WifbYfRn3sxR7oPSvcCRsFMtvB5p90Q==", "id"=>"8", "commit"=>"Login"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 56ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:10:50 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 175ms (Views: 160.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:10:56 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wFhAHk4cKMhoYMNpTLEDpQPLm7BGxoiVJ+RQsZ6jBr2OegS8v6QS8bJ0DXXvD+YvoXc/SPp0yZafwzCle9lfGg==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.3ms)
+
+
+  
+RuntimeError ():
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:11:38 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wFhAHk4cKMhoYMNpTLEDpQPLm7BGxoiVJ+RQsZ6jBr2OegS8v6QS8bJ0DXXvD+YvoXc/SPp0yZafwzCle9lfGg==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:11:38 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:12:11 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cP2/R0/T7TRK+hDowxTWT5d8diJkWJvUA3nvWEO1BNQ+3/vlvmvXDZDu3vRgqjPFNcDS2tjq2te7Xo9Mps9dcw==", "id"=>"8", "commit"=>"Login"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:12:11 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:12:16 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5wQusJ992iNaOqaV+r/gUc3HnyMU6jm4e4BAlkk1DL2pJmoSbsXgGoAuaIlZAQXbb3s726hYeLvDpyCCrE9VGg==", "id"=>"6", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:12:16 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 89ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:12:51 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2xFr9PHCIk/lS+srU2Q2zsdIdBGDgoFfjvlwjPKfP3iVMy9WAHoYdj9fJTfw2tNEZfTQ6T8wwFw23hCYF+Vm3w==", "id"=>"12", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:12:51 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:13:07 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEPVQY/WAgXQkHscm7K5OiSaIrzDqMhWrz6xxBKIHXDiYZHjfm44PAqEtQA4DFywhiaGRH8aiVUXGdHQ9/JE1w==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 17ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:13:07 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:13:11 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xcMv7ZXYa2jQKrvn4zOXCXVBDizvqvIK3kwSmGMLprKL4WtPZGBRUQo+dftAjXKD1/2q1FMYswlma3KMhnH/FQ==", "id"=>"79", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+RuntimeError ():
+  
+app/controllers/sessions_controller.rb:14:in `create'
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:34:29 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 539ms (Views: 531.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:35:57 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HCJNPQ1EJocuKietoLMrT9hDePpYGqY1uN5afScxtFNSAAmf/PwcvvQ+6bEDDc7Fev/cAuSo5zYA+Tppwkvt9A==", "id"=>"80", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:35:57 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 140ms (Views: 134.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:36:01 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rYPZeHdbKJuD0L5kf4w8cgDrMhTIqHMLd/oeMxsavIfjoZ3ahuMSolnEcHjcMtn4oleW7HQaMgjP3X4n/mDlIA==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:36:01 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 62ms (Views: 51.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:36:05 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rv3JXzB2ReAG9FsFMVAw+FcWPCsgJecOEYMcOZiz4Qfg3439wc5/2dzglRmS7tVy9aqY05yXpg2ppHwtfcm4oA==", "id"=>"3", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 85ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:36:06 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 87ms (Views: 75.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:37:17 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M84zETTCazXeRNzYpzzaBSLz1H5p3vUAYt0intfjiwJ97HezxXpRDARQEsQEgj+PgE9whtVstAPa+kKKMpnSpQ==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:37:17 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 62ms (Views: 57.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:37:19 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:37:24 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H1lt4KBtL9lSgVeVWInWKlzIyup7WGHMeGpvSBGDGvpReylCUdUV4IiVmYn7NzOg/nRuEsfqIM/ATQ9c9PlDXQ==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:37:24 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 54ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:39:18 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZTeJme6cqeAadHMsf/pwyHN5OI0GzE3SUhRhVZ/qiW4rFc07HyST2cBgvTDcRJVC0cWcdbp+DNHqMwFBepDQyQ==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:39:18 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:39:37 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cZrGobo23tu++16X+wNEd8YCCMMFy2L1Lld72Rgxo4w/uIIDS47k4mTvkItYvaH9ZL6sO7l5I/aWcBvN/Uv6Kw==", "id"=>"2", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:39:37 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 83ms (Views: 70.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-07-04 05:39:41 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kKWe0vZNJpugF87iTDwGY9qID8wlTLR+zwjPBISxb5Teh9pwB/UconoDAP7vguPpeDSrNJn+9X13L68QYcs2Mw==", "id"=>"4", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login/new
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2020-07-04 05:39:41 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
