@@ -1,0 +1,27 @@
+  <%= form_for @event do |f|  %>
+ 
+
+<div class="form">
+  
+  <div> 
+    <%= label_tag(:loc_event, "Enter Event's location:") %>
+     <%= f.text_field :loc_event, class:"form_element input is-primary", placeholder:"Event's location" %>
+   </div>
+   <%= label_tag(:date, "Enter Event's date:") %>
+
+    <div> 
+    <%= f.datetime_local_field :date, class:"form_element input is-primary", placeholder:"Event's date" %>
+   </div>
+    <div> 
+    <%= label_tag(:description, "Event's description here:") %>
+    <%= f.text_area :description, class:"form_element is-primary", size: "60x12", placeholder:"Event's description" %>
+   </div>
+   <br>
+  <div class="">
+      <%= f.submit "Create_Event", class:"button is-success"%>
+    </div>
+</div>
+
+
+  <% end %>
+

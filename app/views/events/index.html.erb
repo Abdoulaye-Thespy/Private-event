@@ -1,6 +1,31 @@
+<main>
 <% @events.each do |x| %>
-<div><%= x.description %></div>
-<div><%= x.user_id %></div>
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Event
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div><%= x.description %></div>
+      <div><%= x.creator.name%></div>
+      <br>
+      <time datetime="2016-1-1"><%= x.date %></time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <%= link_to 'View', event_path(x.id), class:"card-footer-item" %>
+    <a href="#" class="card-footer-item">Register</a>
+    <a href="#" class="card-footer-item">Remind me</a>
+  </footer>
+</div>
 
 <% end %>
 <% if logged_in? %>
@@ -16,3 +41,8 @@
   </button>
 </div>
 <% end %>
+
+
+
+
+</main>

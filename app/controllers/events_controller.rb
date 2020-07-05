@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to root_path, notice: 'Tweeet was successfully created.' }
+        format.html { redirect_to user_path(current_user.id), notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -21,10 +21,18 @@ class EventsController < ApplicationController
     end
 	end
 
+    def show
+    @event=set_event
+  end
 
 
+
+    def set_event
+      @event = Event.find(params[:id])
+    end
 
     def event_params
-      params.require(:event).permit(:description)
+      params.require(:event).permit(:loc_event, :date, :description)
     end
+
 end

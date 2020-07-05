@@ -27,12 +27,8 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-           <%= link_to current_user.name,  new_user_path %>
-          </a>
-          <a class="button is-light">
-             <%= link_to 'Logout',  session_path(current_user.id), method: :delete %>
-          </a>
+           <%= link_to current_user.name,  new_user_path, class:"button is-primary" %>
+           <%= link_to 'Logout',  session_path(current_user.id), method: :delete , class:"button is-light" %>
         </div>
       </div>
     </div>
@@ -41,13 +37,8 @@
         <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-           <%= link_to 'Sign up',  new_user_path %>
-            <%= link_to 'Login',  new_session_path %>
-          </a>
-          <a class="button is-light">
-           
-          </a>
+           <%= link_to 'Sign up',  new_user_path, class:"button is-primary" %>
+            <%= link_to 'Login',  new_session_path , class:"button is-light" %>
         </div>
       </div>
     </div>

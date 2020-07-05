@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by_id(params[:id])
      if user
       session[:id] = user.id
-      redirect_to events_path, notice: "Logged in!"
+      redirect_to user_path(session[:id]), notice: "Logged in!"
 
     else
       flash.now[:alert] = "Email or password is invalid"

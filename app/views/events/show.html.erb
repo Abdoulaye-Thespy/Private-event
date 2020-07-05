@@ -1,0 +1,28 @@
+<main>
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Event
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div><%= @event.description %></div>
+      <div><%= @event.creator.name%></div>
+      <br>
+      <time datetime="2016-1-1"><%= @event.date %></time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Register</a>
+    <a href="#" class="card-footer-item">Remind me</a>
+  </footer>
+</div>
+
+</main>

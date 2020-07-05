@@ -1,5 +1,20 @@
+   <main>
+
   <%= form_for @user do |f| %>
-    <%= f.text_field :name %>
-    <%= f.text_field :email %>
-    <%= f.submit "Create" %>
+
+  <div>
+  <%= label_tag(:name, "Enter Your name:") %>
+   <%= f.text_field :name,   class:"input is-info", placeholder:"Name" %>
+  	
+  </div>
+  <div>
+  	<%= label_tag(:email, "Enter Your email:") %>
+  	 <%= f.text_field :email, class:"input is-info", placeholder:"Email" %>
+  </div>
+   
+   <p> <%= f.submit "Sign Up", class:"button is-primary" %></p>
+   
   <% end %>
+  
+
+  </main>

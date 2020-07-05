@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :sessions, only: [:destroy]
   resources :sessions, :path => "login" , only: [:new, :create]
   resources :events, only: [:new, :create, :show, :index]
+  
 end
