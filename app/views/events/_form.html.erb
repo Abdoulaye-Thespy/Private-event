@@ -1,6 +1,11 @@
-  <%= form_for @event do |f|  %>
- 
 
+  <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
+
+  <%= form_for @event do |f|  %>
 <div class="form">
   
   <div> 

@@ -21,3 +21,10 @@ RSpec.describe User, :type => :model do
     expect(subject).to_not be_valid
   end
 end
+
+describe User do
+  it do
+    should have_many(:events).
+      class_name('Event')
+  end
+end
