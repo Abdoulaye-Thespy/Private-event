@@ -33,11 +33,18 @@
 
 <% end %>
 
+ <% if @attendees != nil %>
+ <% @attendees.each do |attendee| %>
+
+      <div><%= attendees.email %></div>
+      <div><%= attendees.name%></div>
+ <% end %>
+<% end %>
 
 <% if logged_in? %>
   <div class="">
      
-       <%= link_to "Create_Event", new_event_path, class:"button is-success"%>
+       <%= link_to "Create_Event", new_user_event_path(current_user.id), class:"button is-success"%>
     </div>
 </div>
 

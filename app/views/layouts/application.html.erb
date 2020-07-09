@@ -15,10 +15,15 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        <strong>Private event</strong>
-      </a>
+        <div class="buttons">
+           <% if logged_in? %>
 
+            <%= link_to 'My Events',  user_path(current_user.id) , class:"button is-light" %>
+            <%= link_to 'Other Events',  user_events_path(current_user.id) , class:"button is-link" %>
+
+
+            <% end %>
+        </div>
       </div>
     </div>
 
@@ -27,7 +32,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-           <%= link_to current_user.name,  new_user_path, class:"button is-primary" %>
+           <%= link_to current_user.name,  user_path(current_user.id), class:"button is-primary" %>
            <%= link_to 'Logout',  session_path(current_user.id), method: :delete , class:"button is-light" %>
         </div>
       </div>

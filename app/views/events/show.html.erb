@@ -20,6 +20,8 @@
     </div>
   </div>
   <footer class="card-footer">
+    <%= link_to "Register", @event, new_attended_event_path, class:"card-footer-item"%>
+    <%= link_to "new member", @event, method: "set_participant", class:"card-footer-item" %>
     <a href="#" class="card-footer-item">Register</a>
     <a href="#" class="card-footer-item">Remind me</a>
   </footer>

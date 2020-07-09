@@ -1,0 +1,12 @@
+<h1>Razak</h1>
+
+
+
+
+  <%= form_for @my_events do |f|  %>
+  
+    <div> 
+    <%= f.select :event_id, options_for_select(@my_events) %>
+   </div>
+
+<% end %>

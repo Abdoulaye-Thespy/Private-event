@@ -1,4 +1,5 @@
 <main>
+
 <% @events.each do |x| %>
 
 <div class="card">
@@ -21,7 +22,9 @@
     </div>
   </div>
   <footer class="card-footer">
-    <%= link_to 'View', event_path(x.id), class:"card-footer-item" %>
+  	<% if logged_in? %>
+  	<%= link_to 'Attend',  new_user_event_attended_event_path(current_user.id, x.id),  class:"card-footer-item", data: {confirm: "Attend to this event?" , disable_with: "Attending..." } %>
+  	<% end %>
     <a href="#" class="card-footer-item">Register</a>
     <a href="#" class="card-footer-item">Remind me</a>
   </footer>
@@ -31,7 +34,7 @@
 <% if logged_in? %>
 <div class="buttons">
   <button class="button is-warning">
-  	<%= link_to 'Create new even',  new_event_path %>
+  	
   </button>
 </div>
 <% else %>
@@ -41,8 +44,5 @@
   </button>
 </div>
 <% end %>
-
-
-
 
 </main>

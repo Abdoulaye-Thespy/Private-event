@@ -6,8 +6,7 @@ class EventsController < ApplicationController
 
 	def new
 		@event = current_user.events.build
-
-    @r=1
+    @user = User.find_by_id(current_user.id)
 	end
 	def create
     @event = current_user.events.build(event_params)
@@ -25,6 +24,7 @@ class EventsController < ApplicationController
 
     def show
     @event=set_event
+    @attendees=AttendedEvent.find_by_id(evnt_id: @vent.id)
   end
 
 
@@ -35,6 +35,10 @@ class EventsController < ApplicationController
 
     def event_params
       params.require(:event).permit(:loc_event, :date, :description)
+    end
+
+    def set_participant
+     
     end
 
 end
