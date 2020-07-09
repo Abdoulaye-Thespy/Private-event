@@ -25,6 +25,7 @@
   	<% if logged_in? %>
   	<%= link_to 'Attend',  new_user_event_attended_event_path(current_user.id, x.id),  class:"card-footer-item", data: {confirm: "Attend to this event?" , disable_with: "Attending..." } %>
   	<% end %>
+  	<%= link_to 'View',  user_event_path(0, x.id),  class:"card-footer-item" %>  	
     <a href="#" class="card-footer-item">Register</a>
     <a href="#" class="card-footer-item">Remind me</a>
   </footer>

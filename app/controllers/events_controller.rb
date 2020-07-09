@@ -24,7 +24,7 @@ class EventsController < ApplicationController
 
     def show
     @event=set_event
-    @attendees=AttendedEvent.find_by_id(evnt_id: @vent.id)
+    @attendees=Event.find_by_id(params[:id]).attendees
   end
 
 
