@@ -26,6 +26,34 @@
     </div>
   </div>
   <footer class="card-footer">
+    <a href="#" class="card-footer-item">Attending</a>
+    <a href="#" class="card-footer-item">Invite</a>
+  </footer>
+</div>
+
+<% end %>
+
+<% @events.each do |x| %>
+<div class="card middle">
+  <header class="card-header">
+    <p class="card-header-title">
+      Component
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div><%= x.description %></div>
+      <div><%= x.creator.name%></div>
+      <br>
+      <time datetime="2016-1-1"><%= x.date %></time>
+    </div>
+  </div>
+  <footer class="card-footer">
     <a href="#" class="card-footer-item">View Participants</a>
     <a href="#" class="card-footer-item">Invite</a>
   </footer>

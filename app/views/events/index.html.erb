@@ -23,7 +23,7 @@
   </div>
   <footer class="card-footer">
   	<% if logged_in? %>
-  	<%= link_to 'Attend',  new_user_event_attended_event_path(current_user.id, x.id),  class:"card-footer-item", data: {confirm: "Attend to this event?" , disable_with: "Attending..." } %>
+  	<%= link_to 'Attend', new_user_event_attended_event_path(current_user.id, x.id), class:"card-footer-item", data: {confirm: "Attend to this event?", disable_with: "Attending..." } %>
   	<% end %>
   	<%= link_to 'View',  user_event_path(0, x.id),  class:"card-footer-item" %>  	
     <a href="#" class="card-footer-item">Register</a>
@@ -33,11 +33,7 @@
 
 <% end %>
 <% if logged_in? %>
-<div class="buttons">
-  <button class="button is-warning">
-  	
-  </button>
-</div>
+  	<%= link_to 'Back',  user_path(current_user.id), class:"button is-link" %>
 <% else %>
 <div class="buttons">
   <button class="button is-warning">

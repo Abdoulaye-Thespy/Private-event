@@ -10,6 +10,7 @@ class EventsController < ApplicationController
 	end
 	def create
     @event = current_user.events.build(event_params)
+    AttendedEvent.create attended_even: @event, attendee: @user
      respond_to do |format|
       if @event.save
         format.html { redirect_to user_path(current_user.id), notice: 'Event was successfully created.' }
@@ -22,9 +23,9 @@ class EventsController < ApplicationController
     end
 	end
 
-    def show
+  def show
     @event=set_event
-    @attendees=Event.find_by_id(params[:id]).attendees
+    @attendees=@event.attendees
   end
 
 

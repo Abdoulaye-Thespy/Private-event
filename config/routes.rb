@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'events#index'
-  resources :users do
+    resources :users do
   	resources :events, only: [:new, :create, :show, :index] do
     resources :attended_events, only: [:new, :create, :show]
   	end

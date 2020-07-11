@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user=set_user
-    @event=@user.events.all
+    @event=@user.attended_evens
+    @events=Event.all.where(user_id: @user.id)
   end
 
   # GET /users/new

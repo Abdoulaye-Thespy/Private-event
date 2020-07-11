@@ -26,10 +26,9 @@
   </footer>
 </div>
 
+
  <% unless @attendees.nil? %>
  <% @attendees.each do |attendee| %>
-          <h1>razak</h1>
-
       <div><%= attendee.email %></div>
       <div><%= attendee.name%></div>
  <% end %>

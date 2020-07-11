@@ -6,7 +6,6 @@ def new
     redirect_to user_path(current_user.id)
 
 end
-	
 
 	 def participation_params
       params.require(:user, :event).permit(:user_id, :event_id)
