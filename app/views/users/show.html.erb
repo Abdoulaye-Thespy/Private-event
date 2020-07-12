@@ -5,11 +5,16 @@
 <strong> <%= @user.id %></strong>
 
 
-<% @event.each do |x| %>
+<h1 class="title is-3 is-primary">Even't created by you</h1>
+<div class="columns">
+
+<div class="column">
+
+<% @my_upcoming.each do |x| %>
 <div class="card middle">
   <header class="card-header">
-    <p class="card-header-title">
-      Component
+    <p class="card-header-title is-warning">
+      upcoming event!! Hosted by: <strong>YOU</strong>
     </p>
     <a href="#" class="card-header-icon" aria-label="more options">
       <span class="icon">
@@ -26,18 +31,22 @@
     </div>
   </div>
   <footer class="card-footer">
-    <a href="#" class="card-footer-item">Attending</a>
-    <a href="#" class="card-footer-item">Invite</a>
+    <a href="#" class="card-footer-item">View Participant</a>
+    <%= link_to "Invite", users_path, class:"is-success card-footer-item"%>
   </footer>
 </div>
 
 <% end %>
 
-<% @events.each do |x| %>
+</div>
+
+<div class="column">
+
+<% @my_prev_event.each do |x| %>
 <div class="card middle">
   <header class="card-header">
     <p class="card-header-title">
-      Component
+      previous Event!! Hosted by: <strong>YOU</strong>
     </p>
     <a href="#" class="card-header-icon" aria-label="more options">
       <span class="icon">
@@ -55,11 +64,19 @@
   </div>
   <footer class="card-footer">
     <a href="#" class="card-footer-item">View Participants</a>
-    <a href="#" class="card-footer-item">Invite</a>
+    <%= link_to "Invite", users_path, class:"is-success card-footer-item"%>
   </footer>
 </div>
 
 <% end %>
+
+</div>
+
+</div>
+
+<hr>
+<hr>
+<hr>
 
  <% if @attendees != nil %>
  <% @attendees.each do |attendee| %>

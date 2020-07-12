@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     @user=set_user
     @event=@user.attended_evens
     @events=Event.all.where(user_id: @user.id)
+    @my_upcoming=@user.upcoming_events
+    @my_prev_event=@user.prev_coming_events
   end
 
   # GET /users/new
