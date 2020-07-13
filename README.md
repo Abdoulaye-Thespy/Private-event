@@ -1,24 +1,38 @@
-# README
+## Building with Active Record
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is 
 
-Things you may want to cover:
+## Project descipription
 
-* Ruby version
+- As this project is still under reviews when you login as a new user, you are prompted with your own ID that should be used to login.
 
-* System dependencies
+- Upcoming and previous events are shown side by side on every single page.
 
-* Configuration
+- Invitating more people to attend to an event  is only done by one click and you should be able to see it on the first lines after the given.
 
-* Database creation
+## Built with
 
-* Database initialization
+- Ruby on Rails
+- Bulma for design
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+- Clone the git repository.
+- cd into the project
+- run bundle install.
+- run ```rails c```
+- Use ```Post.create, User.create, Comment.create``` to create new posts, users and comments respectively.
+- Refer [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations) to find more on how the Specification of the projects.
 
-* Deployment instructions
+## Author
 
-* ...
+Abdoulaye Njigouh
+
+- Github: [@Abdoulaye](https://github.com/Abdoulaye-Thespy)
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
