@@ -26,12 +26,56 @@
   </footer>
 </div>
 
-
+<h1 class="title is-5 is-primary">People Attending the event</h1>
  <% unless @attendees.nil? %>
  <% @attendees.each do |attendee| %>
-      <div><%= attendee.email %></div>
-      <div><%= attendee.name%></div>
+            <div class="card">
+  <div class="card-content">
+    <p class="title is-6">
+     <%= attendee.email %>
+    </p>
+    <p class="subtitle">
+      <%= attendee.name%>
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+       Message
+    </p>
+    <p class="card-footer-item">
+<a href="#" class="card-footer-item">Uninvite</a>
+    </p>
+  </footer>
+</div>
  <% end %>
 <% end %>
 
+<% if logged_in? && @event.user_id==current_user.id %>
+
+<h1 class="title is-5 is-primary">People you Can invite to the event</h1>
+
+ <% unless @users.nil? %>
+ <% @users.each do |user| %>
+
+      <div class="card">
+  <div class="card-content">
+    <p class="title is-6">
+     <%= user.email %>
+    </p>
+    <p class="subtitle">
+      <%= user.name%>
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+       Message
+    </p>
+    <p class="card-footer-item">
+<%= link_to 'Invite', new_user_event_attended_event_path(user.id, @event.id), class:"card-footer-item", data: {confirm: "invite this user?", disable_with: "Attending..." } %>
+    </p>
+  </footer>
+</div>
+ <% end %>
+<% end %>
+<% end %>
 </main>

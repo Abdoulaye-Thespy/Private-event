@@ -2,11 +2,14 @@
   <section class="columns">
     
    <div class="column">
+    <h1 class="title is-3 is-primary">Upcoming events</h1>
     <% @up_events.each do |x| %>
+
+   <% if !logged_in? || current_user.id!=x.user_id %>
 <div class="card">
   <header class="card-header">
     <p class="card-header-title">
-      Event
+     Upcoming event
     </p>
     <a href="#" class="card-header-icon" aria-label="more options">
       <span class="icon">
@@ -29,10 +32,9 @@
     <%= link_to 'Attend', new_user_event_attended_event_path(current_user.id, x.id), class:"card-footer-item", data: {confirm: "Attend to this event?", disable_with: "Attending..." } %>
     <% end %>
     <%= link_to 'View',  user_event_path(0, x.id),  class:"card-footer-item" %>   
-    <a href="#" class="card-footer-item">Register</a>
-    <a href="#" class="card-footer-item">Remind me</a>
   </footer>
 </div>
+<% end %>
 
 <% end %>
 <% if logged_in? %>
@@ -47,13 +49,15 @@
 
    </div>
 
+
+
    <div class="column">
-     
+     <h1 class="title is-3 is-primary">Previous Events</h1>
      <% @prev_events.each do |x| %>
 <div class="card">
   <header class="card-header">
     <p class="card-header-title">
-      Event
+      Past events
     </p>
     <a href="#" class="card-header-icon" aria-label="more options">
       <span class="icon">

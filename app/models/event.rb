@@ -5,10 +5,13 @@ class Event < ApplicationRecord
   has_many :attendees, through: :attended_events
 
   def self.coming
-    Event.where('date >= ?',Date.today)
+    Event.where('date >= ?', Date.today)
   end
 
   def self.past
-    Event.where('date < ?',Date.today)
+    Event.where('date < ?', Date.today)
   end
+
+  scope :coming, -> { where('date >= ?', Date.today) }
+  scope :past, -> { where('date < ?', Date.today) }
 end

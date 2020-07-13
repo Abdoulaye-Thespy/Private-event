@@ -20,6 +20,9 @@
 
             <%= link_to 'My Events',  user_path(current_user.id) , class:"button is-light" %>
             <%= link_to 'Other Events',  user_events_path(current_user.id) , class:"button is-link" %>
+            <%= link_to "Create_Event", new_user_event_path(current_user.id), class:"button is-success"%>
+            <% else %>
+           <%= link_to 'Private Events',  users_path , class:"button is-info" %>
 
 
             <% end %>
@@ -50,6 +53,17 @@
     <% end %>
   </div>
 </nav>
+
+
     <%= yield %>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">AbdoulaeTheSpy</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">The Spy private Event</a>.
+    </p>
+  </div>
+</footer>
   </body>
 </html>
