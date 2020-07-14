@@ -11,7 +11,8 @@ class User < ApplicationRecord
   def prev_coming_events
     events.where('date < ?', Date.today)
   end
+
   def my_events
-   events
+    events
   end
 end
