@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def show
     @user = set_user
     @event = @user.attended_evens
-    @events = Event.all.where(user_id: @user.id)
+    @events = @user.my_events
     @my_upcoming = @user.upcoming_events
     @my_prev_event = @user.prev_coming_events
   end
@@ -74,6 +74,6 @@ class UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:id, :name, :email)
   end
 end
