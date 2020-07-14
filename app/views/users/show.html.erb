@@ -10,33 +10,7 @@
 
 <div class="column">
 
-<% @my_upcoming.each do |x| %>
-<div class="card middle">
-  <header class="card-header">
-    <p class="card-header-title is-warning">
-      upcoming event!! Hosted by: <strong>YOU</strong>
-    </p>
-    <a href="#" class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </a>
-  </header>
-  <div class="card-content">
-    <div class="content">
-      <div><%= x.description %></div>
-      <div><%= x.creator.name%></div>
-      <br>
-      <time datetime="2016-1-1"><%= x.date %></time>
-    </div>
-  </div>
-  <footer class="card-footer">
-    <a href="#" class="card-footer-item">View Participant</a>
-    <%= link_to "Invite", user_event_path(current_user.id, x.id), class:"is-success card-footer-item"%>
-  </footer>
-</div>
-
-<% end %>
+<%= render_my_card(@my_upcoming) %>
 
 </div>
 
@@ -150,25 +124,8 @@
 
 </div>
 
- <% if @attendees != nil %>
- <% @attendees.each do |attendee| %>
-
-      <div><%= attendees.email %></div>
-      <div><%= attendees.name%></div>
- <% end %>
-<% end %>
-
-<% if logged_in? %>
-  <div class="">
-     
-       <%= link_to "Create_Event", new_user_event_path(current_user.id), class:"button is-success"%>
-    </div>
 </div>
 
-<% else %>
-  <div class="">
-      <%= link_to "Login", new_session_path, class:"button is-link"%>
-    </div>
-</div>
-<% end %>
+
+<%= login_logout %>
 </main>

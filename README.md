@@ -8,7 +8,7 @@ This project is
 
 - Upcoming and previous events are shown side by side on every single page.
 
-- Invitating more people to attend to an event  is only done by one click and you should be able to see it on the first lines after the given.
+- Inviting more people to attend to an event  is only done by one click and you should be able to see it on the first lines after the given.
 
 ## Built with
 
