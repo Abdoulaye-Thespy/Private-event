@@ -35,19 +35,10 @@
 <% end %>
 
 <% end %>
-<% if logged_in? %>
-    <%= link_to 'Back',  user_path(current_user.id), class:"button is-link" %>
-<% else %>
-<div class="buttons">
-  <button class="button is-warning">
-    <%= link_to 'Login',  new_session_path %>
-  </button>
-</div>
-<% end %> 
+
+<%= back_login %>
 
    </div>
-
-
 
    <div class="column">
      <h1 class="title is-3 is-primary">Previous Events</h1>
@@ -74,8 +65,7 @@
   <footer class="card-footer">
 
     <%= attend (x.id) %>
-    <%= link_to 'View',  user_event_path(0, x.id),  class:"card-footer-item" %>   
-    <a href="#" class="card-footer-item">Register</a>
+    <%= link_to 'View',  user_event_path(0, x.id),  class:"card-footer-item" %>  
     <a href="#" class="card-footer-item">Remind me</a>
   </footer>
 </div>
