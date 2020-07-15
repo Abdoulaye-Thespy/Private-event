@@ -4,7 +4,6 @@ class Event < ApplicationRecord
   has_many :attended_events, inverse_of: 'attended_even'
   has_many :attendees, through: :attended_events
 
-
   scope :coming, -> { where('date >= ?', Date.today) }
   scope :past, -> { where('date < ?', Date.today) }
 end
