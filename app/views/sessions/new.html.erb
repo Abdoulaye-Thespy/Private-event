@@ -1,0 +1,15 @@
+ <p id="notice"><%= notice %></p>
+
+ <p id=”alert”><%= alert %></p>
+
+ <h1>Login</h1>
+
+ <%= form_tag sessions_path do |form| %>
+
+  <div>
+   <%= label_tag(:id, "Enter Your ID:") %>
+   <%= text_field_tag :id %>
+  	
+  </div>
+  <%= submit_tag("Login") %>
+<% end %>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PrivateEvent</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+        <div class="buttons">
+           <% if logged_in? %>
+
+            <%= link_to 'My Events',  user_path(current_user.id) , class:"button is-light" %>
+            <%= link_to 'Other Events',  user_events_path(current_user.id) , class:"button is-link" %>
+            <%= link_to "Create_Event", new_user_event_path(current_user.id), class:"button is-success"%>
+            <% else %>
+           <%= link_to 'Private Events',  users_path , class:"button is-info" %>
+
+
+            <% end %>
+        </div>
+      </div>
+    </div>
+
+
+   <% if logged_in? %>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+           <%= link_to current_user.name,  user_path(current_user.id), class:"button is-primary" %>
+           <%= link_to 'Logout',  session_path(current_user.id), method: :delete , class:"button is-light" %>
+        </div>
+      </div>
+    </div>
+
+    <% else %>
+        <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+           <%= link_to 'Sign up',  new_user_path, class:"button is-primary" %>
+            <%= link_to 'Login',  new_session_path , class:"button is-light" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</nav>
+
+
+    <%= yield %>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">AbdoulaeTheSpy</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">The Spy private Event</a>.
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<main>
+  <section class="columns">
+    
+   <div class="column">
+    <h1 class="title is-3 is-primary">Upcoming events</h1>
+    <% @up_events.each do |x| %>
+
+   <% if !logged_in? || current_user.id!=x.user_id %>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+     Upcoming event
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div><%= x.description %></div>
+      <div><%= x.creator.name%></div>
+      <br>
+      <time datetime="2016-1-1"><%= x.date %></time>
+    </div>
+  </div>
+  <footer class="card-footer">
+
+
+ <%= attend (x.id) %>
+    <%= link_to 'View',  user_event_path(0, x.id),  class:"card-footer-item" %>   
+  </footer>
+</div>
+<% end %>
+
+<% end %>
+
+<%= back_login %>
+
+   </div>
+
+   <div class="column">
+     <h1 class="title is-3 is-primary">Previous Events</h1>
+     <% @prev_events.each do |x| %>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Past events
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <div><%= x.description %></div>
+      <div><%= x.creator.name%></div>
+      <br>
+      <time datetime="2016-1-1"><%= x.date %></time>
+    </div>
+  </div>
+  <footer class="card-footer">
+
+    <%= attend (x.id) %>
+    <%= link_to 'View',  user_event_path(0, x.id),  class:"card-footer-item" %>  
+    <a href="#" class="card-footer-item">Remind me</a>
+  </footer>
+</div>
+
+<% end %>
+   </div>
+
+  </section>
+
+
+</main>
